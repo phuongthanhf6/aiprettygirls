@@ -263,7 +263,7 @@ quo::after {
 }
 
 .header .logo {
-    min-width: 200px;
+    min-width: 222px;
     display: flex;
     align-items: center; 
     text-decoration: none; 
@@ -271,7 +271,7 @@ quo::after {
 
 .header .logo span {
     color: white; 
-    font-size: 2.4rem; 
+    font-size: 2.2rem; 
     font-family: var(--font-2);
 }
 

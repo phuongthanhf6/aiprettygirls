@@ -1,5 +1,5 @@
 body {
-    background-color: var(--color-7);  
+    background-color: var(--color-7);
 }
 
 /* Filter */
@@ -35,21 +35,65 @@ body {
     padding: 20px;
     gap: 16px;
 }
-.gallery img {
+
+.gallery .image-container {
+    position: relative;
     width: 24%;
     height: 380px;
+    overflow: hidden;
+}
+
+.gallery .image-container img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 
     cursor: pointer;
-    transition: transform 0.2s;
     border-radius: 8px;
+    display: block;
 
-    color: #fff;
-    font-size: 16px;
-    font-family: var(--font-3);
+    transition: transform 0.5s ease; /* Thêm hiệu ứng transition cho phóng to */
 }
-.gallery img:hover {
-    transform: scale(1.05);
+
+.gallery .image-container:hover img {
+    transform: scale(1.1); /* Phóng to ảnh lên 10% */
+}
+
+.gallery .image-container:hover {
+    border-radius: 8px;
+}
+
+.gallery .image-container::before {
+    position: absolute;
+    top: 0;
+    left: -90%;
+    z-index: 2;
+    display: block;
+    content: "";
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 100%
+    );
+    transform: skewX(-25deg);
+    /* transition: left 0.75s ease; */
+}
+
+.gallery .image-container:hover::before {
+    left: 110%;
+    animation: shine 0.75s;
+}
+
+/* Animation cho hiệu ứng shine */
+@keyframes shine {
+    0% {
+        left: -90%;
+    }
+    100% {
+        left: 110%;
+    }
 }
 
 /* pagination */
@@ -165,7 +209,6 @@ body {
     font-weight: 600;
     line-height: 31px;
     font-size: 14px;
-   
 }
 
 .popup .info-tools .right {
@@ -274,6 +317,6 @@ body {
     background: #ffffff12;
 }
 /* icon */
-.popup .prompt .fa-regular{
+.popup .prompt .fa-regular {
     margin-right: 4px;
 }

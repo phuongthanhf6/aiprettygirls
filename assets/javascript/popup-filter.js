@@ -12,12 +12,14 @@ const images = [
 let filteredImages = images; // Lưu trữ danh sách ảnh sau khi áp dụng bộ lọc
 
 function filterImages(category) {
-    filteredImages = category === "all" ? images : images.filter(image => image.category === category);
+    filteredImages =
+        category === "all"
+            ? images
+            : images.filter((image) => image.category === category);
     currentPage = 1; // Reset trang hiện tại về 1 khi có bộ lọc mới
     renderGallery(currentPage);
     renderPagination();
 }
-
 
 const imagesPerPage = 40;
 let currentPage = 1;
@@ -27,14 +29,27 @@ function renderGallery(page) {
     const gallery = document.getElementById("gallery");
     gallery.innerHTML = "";
     const startIndex = (page - 1) * imagesPerPage;
-    const endIndex = Math.min(startIndex + imagesPerPage, filteredImages.length);
+    const endIndex = Math.min(
+        startIndex + imagesPerPage,
+        filteredImages.length
+    );
 
     for (let i = startIndex; i < endIndex; i++) {
+        // Tạo thẻ div bao bọc img
+        const imageContainer = document.createElement("div");
+        imageContainer.classList.add("image-container");
+        // Tạo thẻ img
         const img = document.createElement("img");
         img.src = filteredImages[i].src;
         img.alt = `Ảnh ${filteredImages[i].id}`; // Giữ lại ID gốc
         img.onclick = () => openPopup(filteredImages[i].id); // Sử dụng ID gốc để mở đúng popup
-        gallery.appendChild(img);
+        // gallery.appendChild(img);
+
+        // Thêm img vào imageContainer
+        imageContainer.appendChild(img);
+
+        // Thêm imageContainer vào gallery
+        gallery.appendChild(imageContainer);
     }
 }
 
@@ -58,14 +73,12 @@ function renderPagination() {
     }
 }
 
-
 function openPopup(id) {
     const popup = document.getElementById(`popup${id}`); // Mở popup theo ID gốc
     if (popup) {
         popup.style.display = "block";
     }
 }
-
 
 // Function to close all popups
 function closePopup() {
