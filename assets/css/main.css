@@ -1,0 +1,332 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-1: #0396ff;
+    --color-2: #7367f0;
+    --color-3: #32ccbc;
+    --color-4: #f55555;
+    --color-5: #ffd503;
+    --color-6: #ff0396;
+    --color-7: #00000a;
+    --font-1: "Anton", sans-serif;
+    --font-2: "Orbitron", sans-serif;
+    --font-3: "Be Vietnam Pro", sans-serif;
+    --font-system: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* 
+    Ta dùng mẹo như sau:
+    1 rem = 16px = 100%
+    1 rem = 10px = 62.5%
+    lúc này ta muốn chuyển 1 px nào đó qua rem thì chỉ cần chia cho 10px
+    vd: width: 50px = 5rem ( còn như thông thường 50px / 16px = 3.125rem)  
+*/
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-3);
+    line-height: 1.6;
+}
+
+li {
+    list-style: none;
+}
+
+hr {
+    border: 0.5px solid #5f5a5a58;
+}
+
+h1 {
+    font-family: var(--font-1);
+    color: var(--color-2);
+    font-size: 4.6rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: var(--font-3);
+    color: var(--color-1);
+    font-size: 2.6rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: var(--font-system);
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: var(--color-3);
+}
+
+h4 {
+    font-family: var(--font-system);
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--color-5);
+}
+
+h5 {
+    font-family: var(--font-system);
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--color-2);
+}
+
+p {
+    font-family: var(--font-3);
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 600;
+}
+
+/* làm highlight nổi bật những từ quan trọng trong câu prompt  */
+hl {
+    color: var(--color-4);
+    font-weight: 500;
+}
+
+.border-image-clip-path {
+    width: 400px;
+    margin: 20px 0;
+    border-bottom: 10px solid;
+    border-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%) 1;
+    clip-path: inset(0px round 0);
+    animation: huerotate 6s infinite linear;
+    filter: hue-rotate(360deg);
+}
+
+/* border image animation */
+@keyframes huerotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.line {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.line-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+table th {
+    background-color: var(--color-4);
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+table tr:hover,
+table tr:hover th {
+    background-color: var(--color-4);
+    color: #fff;
+}
+
+table tr.highlight-row {
+    background: #0400f13f;
+}
+table tr.row-chan {
+    background: #2c94d93a;
+}
+table tr.row-letter {
+    background: #eec0383f;
+}
+
+table tr.row-quality {
+    background: #ef38be2f;
+}
+table tr.row-nsfw {
+    background: #7d06ec44;
+}
+table tr.row-nsfw:hover td,
+table tr.row-quality:hover td,
+table tr.row-chan:hover td,
+table tr.highlight-row:hover td,
+table tr.row-letter:hover td {
+    background-color: var(--color-4);
+    color: #fff;
+}
+
+/* trích dẫn */
+
+quo {
+    border-left: 10px solid;
+    border-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%) 1;
+    clip-path: inset(0px round 0);
+    animation: huerotate 6s infinite linear;
+    filter: hue-rotate(360deg);
+
+    display: inline-flex;
+    align-items: center;
+    height: 60px;
+    min-height: 100%;
+
+    font-size: 1.8rem;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    position: relative;
+}
+
+quo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #fffb7d3d;
+    height: 60px;
+}
+
+/* custom image */
+.img-w600 {
+    width: 600px;
+    object-fit: cover;
+}
+
+.img-w1000 {
+    width: 1000px;
+    object-fit: cover;
+}
+
+/* Header dùng chung cho tất cả trang page */
+.header {
+    top: 0px;
+    position: sticky;
+    height: 64px;
+    background: var(--color-7);
+    opacity: 0.9;
+    padding: 10px 0;
+    z-index: 50;
+}
+
+.header .content-main {
+    display: flex;
+    align-items: center;
+}
+
+.content-main {
+    width: 100%;
+    max-width: calc(100% - 64px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header .logo img {
+    height: 30px;
+    object-fit: cover;
+    margin-left: 4px;
+}
+
+.header .logo {
+    min-width: 200px;
+    display: flex;
+    align-items: center; 
+    text-decoration: none; 
+}
+
+.header .logo span {
+    color: white; 
+    font-size: 2.4rem; 
+    font-family: var(--font-2);
+}
+
+.header .menu {
+    display: flex;
+    margin-left: 100px;
+    position: relative;
+    width: 100%;
+}
+
+.header .menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 4px 20px;
+}
+.header .drop-menu {
+    background: #000000f3;
+    z-index: 60;
+}
+
+.header .drop-menu {
+    position: absolute;
+    top: 100%;
+    display: none;
+}
+
+.header .menu li {
+    padding: 6px 0px;
+}
+
+.header .menu > li:hover {
+    background: var(--color-1);
+    border-radius: 4px;
+}
+
+.header .menu li:hover .drop-menu {
+    display: block;
+}
+
+.header .drop-menu li {
+    padding: 6px 0px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.header .drop-menu li:hover {
+    background: var(--color-4);
+    border-radius: 0;
+}
+
+.header .logo {
+    list-style: none;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}

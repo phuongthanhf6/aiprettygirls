@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trang Web Chia Sẻ Ảnh AI</title>
+        <!-- Embed Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Anton&family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Embed Favicon -->
+        <link
+            rel="apple-touch-icon"
+            sizes="57x57"
+            href="./assets/favicon/apple-icon-57x57.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="60x60"
+            href="./assets/favicon/apple-icon-60x60.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="72x72"
+            href="./assets/favicon/apple-icon-72x72.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="76x76"
+            href="./assets/favicon/apple-icon-76x76.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="114x114"
+            href="./assets/favicon/apple-icon-114x114.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="./assets/favicon/apple-icon-120x120.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="144x144"
+            href="./assets/favicon/apple-icon-144x144.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="152x152"
+            href="./assets/favicon/apple-icon-152x152.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/favicon/apple-icon-180x180.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="./assets/favicon/android-icon-192x192.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="./assets/favicon/favicon-96x96.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/favicon/favicon-16x16.png"
+        />
+        <link rel="manifest" href="./assets/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+            name="msapplication-TileImage"
+            content="./assets/favicon/ms-icon-144x144.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Embed Icon -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+        <!-- Embed Css -->
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <link rel="stylesheet" href="./assets/css/home.css" />
+    </head>
+    <body>
+        <!-- Menu -->
+        <header class="header">
+            <div class="content-main">
+                <a href="./index.html" class="logo">
+                    <span>Thành AI</span>
+                    <img src="./assets/img/logo-thumb.png" alt="LOGO" />
+                </a>
+                <ul class="menu">
+                    <li>
+                        <a href="index.html">Prompt</a>
+                        <ul class="drop-menu">
+                            <li><a href="#medium">Medium</a></li>
+                            <li><a href="#style">Style</a></li>
+                            <li><a href="#composition">Composition</a></li>
+                            <li><a href="#color">Color</a></li>
+                            <li><a href="#emotions">Emotions</a></li>
+                            <li><a href="#location">Location</a></li>
+                            <li><a href="#weather">Weather Conditions</a></li>
+                            <li><a href="#pose">Pose</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./fixed-character.html">Cố định nhân vật</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <hr />
+
+        <!-- Filter Menu -->
+        <div class="filter-buttons">
+            <button onclick="filterImages('all')">All</button>
+            <button onclick="filterImages('anime')">Anime</button>
+            <button onclick="filterImages('realistic')">Realistic</button>
+            <button onclick="filterImages('game')">Game</button>
+            <button onclick="filterImages('buildings')">Buildings</button>
+            <button onclick="filterImages('photography')">Photography</button>
+        </div>
+
+        <div id="gallery" class="gallery">
+            <!-- Ảnh sẽ được tạo động ở đây -->
+        </div>
+        <div id="pagination" class="pagination">
+            <!-- Các liên kết phân trang sẽ được tạo động ở đây -->
+        </div>
+
+        <!-- Popup Content -->
+        <div class="popup-container">
+            <!-- item -->
+            <div id="popup1" class="popup">
+                <div class="popup-content">
+                    <span class="popup-close">&times;</span>
+                    <img src="./assets/img/hair-1.jpg" alt="Ảnh 1" />
+                    <div class="info">
+                        <h2>Details</h2>
+                        <!-- Info tools -->
+                        <div class="info-tools-container">
+                            <div class="info-tools">
+                                <p class="left">Tensor.ART</p>
+                                <p class="right">AI tools</p>
+                            </div>
+                            <div class="info-tools">
+                                <p class="left">FLUX.1 - dev-fp8</p>
+                                <p class="right">Checkpoint</p>
+                            </div>
+                            <div class="info-tools">
+                                <p class="left">[FLUX] HD Boost - ABM - V.1</p>
+                                <p class="right">Lora</p>
+                            </div>
+                        </div>
+                        <!-- Prompt -->
+                        <div class="prompt">
+                            <div class="prompt-header">
+                                <div class="title">Prompt</div>
+                                <div class="copy" onclick="copyText()">
+                                    <i class="fa-regular fa-copy"></i>Copy
+                                </div>
+                            </div>
+                            <!-- Điền nội dung Prompt vào đây -->
+                            <p class="desc" id="promptDesc">
+                                masterpiece, best quality, official art,
+                                extremely detailed 8k CG unity wallpaper,
+                                absurd, 8k resolution, exquisite facial
+                                features, perfect face, Cinematic
+                                lighting\masterpiece, 8k, HDR, best quality,
+                                (extremely detailed skin), photography, analog
+                                style, real life, (realistic person: 1.8),
+                                extremely beautiful, (extremely detailed,
+                                intricate detail), (charming eyes), Image of a
+                                21-year-old woman sitting casually in a cozy
+                                room filled with comic book posters, ((beautiful
+                                face: 1.6)) Create an image of a woman with long
+                                layered hair, where the hair is styled in soft,
+                                flowing layers with the face-framing layers
+                                slightly longer to accentuate her facial
+                                features She is the focus of the photo, now
+                                wearing an elegant silk blouse and tailored
+                                trousers, paired with high-heeled boots. Her
+                                outfit exudes sophistication and grace while
+                                still maintaining a modern, stylish look. The
+                                lighting is soft and natural, creating a warm
+                                glow that enhances the intimate, youthful feel
+                                of the scene. The image captures the nostalgic
+                                and grainy feel typical of film photography,
+                                especially captured with the Olympus Zuiko
+                                Auto-S 38mm f/1.8 lens, adding a classic and
+                                authentic touch to the overall composition.
+                            </p>
+                        </div>
+                        <!-- Nagative  -->
+                        <div class="prompt">
+                            <div class="prompt-header">
+                                <div class="title">Nagative Prompt</div>
+                                <div class="copy" onclick="copyTextNagative()">
+                                    <i class="fa-regular fa-copy"></i>Copy
+                                </div>
+                            </div>
+                            <!-- Điền nội dung Nagative vào đây -->
+                            <p class="desc" id="NagativeDesc">
+                                ng_deepnegative_v1_75t, low quality:2, normal
+                                quality:2, lowres, worst quality:2,
+                                ((monochrome)), ((grayscale)), blury, bad
+                                anatomy, bad hands, badfingers, missingfingers,
+                                extradigit, fewerdigits, wrong hand, badfoots,
+                                badfeet, three legs, deformed leg, wrong feet,
+                                text, cropped, signature, watermark, usemame,
+                                logo, small_penis, abnormal, malformation, nsfw
+                                Lorem, ipsum dolor sit amet consectetur
+                                adipisicing elit. Iure ex, dolor modi optio
+                                expedita, cum perspiciatis eum sint quae sed
+                                aperiam labore maiores repudiandae illum
+                                accusantium id velit nulla, esse quidem et?
+                                Officiis itaque perferendis tempora veritatis,
+                                saepe iusto nisi illo temporibus harum molestiae
+                                dolor similique autem! Voluptates, quaerat
+                                dignissimos.
+                            </p>
+                        </div>
+                        <!-- Specification -->
+                        <div class="spec">
+                            <div class="left">
+                                <p class="title">Size</p>
+                                <p class="desc">768 x 1024</p>
+
+                                <p class="title">Steps</p>
+                                <p class="desc">60</p>
+
+                                <p class="title">Seed</p>
+                                <p class="desc"></p>
+                            </div>
+                            <div class="right">
+                                <p class="title">Sampler</p>
+                                <p class="desc">DPM++ 2M SDE Karras</p>
+
+                                <p class="title">Tỷ lệ CFG</p>
+                                <p class="desc">7</p>
+
+                                <p class="title">Clip skip</p>
+                                <p class="desc"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- item -->
+            <div id="popup2" class="popup">
+                <div class="popup-content">
+                    <span class="popup-close">&times;</span>
+                    <img src="./assets/img/hair-2.jpg" alt="Ảnh 2" />
+                    <div class="info">
+                        <h2>Details</h2>
+                        <div class="prompt">
+                            <div class="title">Prompt</div>
+                            <p class="desc">noi dung 2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- item -->
+            <div id="popup3" class="popup">
+                <div class="popup-content">
+                    <span class="popup-close">&times;</span>
+                    <img src="./assets/img/hair-3.png" alt="Ảnh 1" />
+                    <div class="info">
+                        <h2>Details</h2>
+                        <div class="prompt">
+                            <div class="title">Prompt</div>
+                            <p class="desc">noi dung 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- item -->
+            <div id="popup4" class="popup">
+                <div class="popup-content">
+                    <span class="popup-close">&times;</span>
+                    <img src="./assets/img/img1.jpg" alt="Ảnh 1" />
+                    <div class="info">
+                        <h2>Details</h2>
+                        <div class="prompt">
+                            <div class="title">Prompt</div>
+                            <p class="desc">noi dung 4</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- item -->
+            <div id="popup5" class="popup">
+                <div class="popup-content">
+                    <span class="popup-close">&times;</span>
+                    <img src="./assets/img/img2.jpg" alt="Ảnh 1" />
+                    <div class="info">
+                        <h2>Details</h2>
+                        <div class="prompt">
+                            <div class="title">Prompt</div>
+                            <p class="desc">noi dung 5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- item -->
+            <div id="popup6" class="popup">
+                <div class="popup-content">
+                    <span class="popup-close">&times;</span>
+                    <img src="./assets/img/img3.jpg" alt="Ảnh 2" />
+                    <div class="info">
+                        <h2>Details</h2>
+                        <div class="prompt">
+                            <div class="title">Prompt</div>
+                            <p class="desc">noi dung 6</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup Thông báo -->
+        <div id="copyNotification" class="popup-copy">Đã sao chép!</div>
+
+        <!-- Bộ lọc filter và các vấn đề liên quan popup -->
+        <script src="./assets/javascript/pose-script.js"></script>
+        <!-- Copy nội dung Prompt hay Nagative trong info của popup -->
+        <script src="./assets/javascript/copy.js"></script>
+    </body>
+</html>

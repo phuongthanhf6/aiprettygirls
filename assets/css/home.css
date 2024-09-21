@@ -1,0 +1,279 @@
+body {
+    background-color: var(--color-7);  
+}
+
+/* Filter */
+.filter-buttons {
+    margin: 20px;
+}
+
+.filter-buttons button {
+    padding: 10px;
+    background: none;
+    color: var(--color-3);
+    border: 1px solid var(--color-3);
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: var(--font-3);
+    font-weight: 400;
+}
+
+.filter-buttons button:hover {
+    background-color: var(--color-6);
+    border: 1px solid var(--color-6);
+
+    color: #fff;
+    border-radius: 4px;
+}
+
+/* Gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    padding: 20px;
+    gap: 16px;
+}
+.gallery img {
+    width: 24%;
+    height: 380px;
+    object-fit: cover;
+
+    cursor: pointer;
+    transition: transform 0.2s;
+    border-radius: 8px;
+
+    color: #fff;
+    font-size: 16px;
+    font-family: var(--font-3);
+}
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* pagination */
+.pagination {
+    text-align: center;
+    padding: 20px;
+}
+.pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid #fff;
+    padding: 6px 12px;
+}
+.pagination a.active {
+    font-weight: bold;
+    border: 1px solid var(--color-4);
+    color: var(--color-4);
+}
+
+/* Popup */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000; /* Make sure it is above other elements */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #191f25;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    height: 80%;
+    text-align: left;
+    display: flex;
+}
+
+.popup img {
+    width: 50%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.popup .popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+    color: var(--color-4);
+    padding: 5px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--color-4);
+}
+
+.popup .popup-close:hover {
+    color: #fff;
+    background-color: var(--color-4);
+}
+
+.popup .info {
+    width: 50%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.popup .info::-webkit-scrollbar,
+.popup .prompt .desc::-webkit-scrollbar {
+    width: 4px;
+}
+
+.popup .info::-webkit-scrollbar-thumb,
+.popup .prompt .desc::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #f1f1f194;
+}
+
+.popup .info::-webkit-scrollbar-track,
+.popup .prompt .desc::-webkit-scrollbar-track {
+    background-color: #3e4c5975; /* Màu của thanh cuộn */
+}
+
+.popup .info h2 {
+    color: #fff;
+    font-family: var(--font-3);
+    font-weight: 500;
+    padding-bottom: 26px;
+}
+
+.popup .info-tools {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ffffff42;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 14px;
+    background: #ffffff12;
+    margin-bottom: 8px;
+}
+
+.popup .info-tools .left {
+    color: rgba(255, 255, 255, 0.827);
+    font-weight: 600;
+    line-height: 31px;
+    font-size: 14px;
+   
+}
+
+.popup .info-tools .right {
+    background-color: var(--color-2);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.popup .info .prompt {
+    margin-top: 20px;
+    border-radius: 8px;
+    border: 1px dashed rgb(92, 93, 104);
+    padding: 16px 1px 16px 16px;
+}
+
+.popup .prompt .prompt-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup .prompt .title {
+    color: var(--color-3);
+    font-size: 1.6rem;
+}
+
+.popup .prompt .copy {
+    color: var(--color-1);
+    cursor: pointer;
+    margin-right: 15px;
+    padding: 4px;
+    font-size: 1.4rem;
+}
+
+.popup .prompt .copy:hover {
+    background-color: var(--color-1);
+    color: #fff;
+    border-radius: 4px;
+    padding: 4px 6px;
+    margin-right: 15px;
+}
+
+.popup .prompt .desc {
+    margin-top: 12px;
+    max-height: 200px;
+    color: #fff;
+    font-family: var(--font-3);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+    overflow-y: auto;
+}
+
+/* Hiện lên thông báo Copy thành công */
+.popup-copy {
+    position: fixed;
+    top: -100px; /* Ban đầu popup nằm ngoài màn hình */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-4);
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.popup-copy.show {
+    top: 30%; /* Di chuyển xuống vị trí chính giữa màn hình */
+    opacity: 1;
+}
+
+/* Thông số trong popup info: size, seed, cfg, sampler, steps */
+.popup .info .spec {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup .info .spec .left,
+.popup .info .spec .right {
+    width: 48%;
+}
+
+.popup .info .spec .title {
+    margin-top: 20px;
+    color: var(--color-5);
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.popup .info .spec .desc {
+    min-height: 36px;
+    margin-top: 8px;
+    color: #ffffffd3;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    border: 1px solid #ffffff42;
+    border-radius: 8px;
+    padding: 8px;
+    background: #ffffff12;
+}
+/* icon */
+.popup .prompt .fa-regular{
+    margin-right: 4px;
+}
