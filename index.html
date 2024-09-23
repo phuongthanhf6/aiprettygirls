@@ -124,6 +124,15 @@
                     <li>
                         <a href="./fixed-character.html">Cố định nhân vật</a>
                     </li>
+                    <li>
+                        <a href="#!">Upload</a>
+                        <ul class="drop-menu">
+                            <li><a href="./upload-img.html">Image</a></li>
+                            <li>
+                                <a href="./image-details.html">Image Details</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </header>
@@ -156,7 +165,7 @@
                     <img src="./assets/img/hair-1.jpg" alt="Ảnh 1" />
                     <div class="info">
                         <h2>Details</h2>
-                        <!-- Info tools -->
+                        <!-- AI tools -->
                         <div class="info-tools-container">
                             <div class="info-tools">
                                 <p class="left">Tensor.ART</p>
@@ -179,38 +188,15 @@
                                     <i class="fa-regular fa-copy"></i>Copy
                                 </div>
                             </div>
-                            <!-- Điền nội dung Prompt vào đây -->
+                            <!-- Custom Prompt Here -->
                             <p class="desc" id="promptDesc">
                                 masterpiece, best quality, official art,
                                 extremely detailed 8k CG unity wallpaper,
-                                absurd, 8k resolution, exquisite facial
-                                features, perfect face, Cinematic
-                                lighting\masterpiece, 8k, HDR, best quality,
-                                (extremely detailed skin), photography, analog
-                                style, real life, (realistic person: 1.8),
-                                extremely beautiful, (extremely detailed,
-                                intricate detail), (charming eyes), Image of a
-                                21-year-old woman sitting casually in a cozy
-                                room filled with comic book posters, ((beautiful
-                                face: 1.6)) Create an image of a woman with long
-                                layered hair, where the hair is styled in soft,
-                                flowing layers with the face-framing layers
-                                slightly longer to accentuate her facial
-                                features She is the focus of the photo, now
-                                wearing an elegant silk blouse and tailored
-                                trousers, paired with high-heeled boots. Her
-                                outfit exudes sophistication and grace while
-                                still maintaining a modern, stylish look. The
-                                lighting is soft and natural, creating a warm
-                                glow that enhances the intimate, youthful feel
-                                of the scene. The image captures the nostalgic
-                                and grainy feel typical of film photography,
-                                especially captured with the Olympus Zuiko
-                                Auto-S 38mm f/1.8 lens, adding a classic and
-                                authentic touch to the overall composition.
+                                absurd, 8k resolution
+                               
                             </p>
                         </div>
-                        <!-- Nagative  -->
+                        <!-- Nagative -->
                         <div class="prompt">
                             <div class="prompt-header">
                                 <div class="title">Nagative Prompt</div>
@@ -218,7 +204,7 @@
                                     <i class="fa-regular fa-copy"></i>Copy
                                 </div>
                             </div>
-                            <!-- Điền nội dung Nagative vào đây -->
+                            <!-- Custom Negative Here -->
                             <p class="desc" id="NagativeDesc">
                                 ng_deepnegative_v1_75t, low quality:2, normal
                                 quality:2, lowres, worst quality:2,
@@ -239,7 +225,84 @@
                                 dignissimos.
                             </p>
                         </div>
-                        <!-- Specification -->
+                        <!-- Thông số -->
+                        <div class="spec">
+                            <div class="left">
+                                <p class="title">Size</p>
+                                <p class="desc">768 x 1024</p>
+
+                                <p class="title">Steps</p>
+                                <p class="desc">60</p>
+
+                                <p class="title">Seed</p>
+                                <p class="desc">213213a</p>
+                            </div>
+                            <div class="right">
+                                <p class="title">Sampler</p>
+                                <p class="desc">DPM++ 2M SDE Karras</p>
+
+                                <p class="title">Tỷ lệ CFG</p>
+                                <p class="desc">7</p>
+
+                                <p class="title">Clip skip</p>
+                                <p class="desc">2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- item -->
+            <div id="popup2" class="popup">
+                <div class="popup-content">
+                    <span class="popup-close">&times;</span>
+                    <img src="./assets/img/hair-2.jpg" alt="Ảnh 1" />
+                    <div class="info">
+                        <h2>Details</h2>
+                        <!-- AI tools -->
+                        <div class="info-tools-container">
+                            <div class="info-tools">
+                                <p class="left">Tensor.ART</p>
+                                <p class="right">AI tools</p>
+                            </div>
+                            <div class="info-tools">
+                                <p class="left">FLUX</p>
+                                <p class="right">Checkpoint</p>
+                            </div>
+                            <div class="info-tools">
+                                <p class="left">Girls</p>
+                                <p class="right">Lora</p>
+                            </div>
+                        </div>
+                        <!-- Prompt -->
+                        <div class="prompt">
+                            <div class="prompt-header">
+                                <div class="title">Prompt</div>
+                                <div class="copy" onclick="copyText()">
+                                    <i class="fa-regular fa-copy"></i>Copy
+                                </div>
+                            </div>
+                            <!-- Custom Prompt Here -->
+                            <p class="desc" id="promptDesc">
+                                Đây là nội dung prompt popup 2
+                            </p>
+                        </div>
+                        <!-- Nagative -->
+                        <div class="prompt">
+                            <div class="prompt-header">
+                                <div class="title">Nagative Prompt</div>
+                                <div class="copy" onclick="copyTextNagative()">
+                                    <i class="fa-regular fa-copy"></i>Copy
+                                </div>
+                            </div>
+                            <!-- Custom Negative Here -->
+                            <p class="desc" id="NagativeDesc">
+                                ng_deepnegative_v1_75t, low quality:2, normal
+                                quality:2, lowres, worst quality:2,
+                                ((monochrome)), ((grayscale)), blury, bad
+                                anatomy, bad hands, badfingers, missingfingers,
+                            </p>
+                        </div>
+                        <!-- Thông số -->
                         <div class="spec">
                             <div class="left">
                                 <p class="title">Size</p>
@@ -265,72 +328,188 @@
                     </div>
                 </div>
             </div>
-            <!-- item -->
-            <div id="popup2" class="popup">
-                <div class="popup-content">
-                    <span class="popup-close">&times;</span>
-                    <img src="./assets/img/hair-2.jpg" alt="Ảnh 2" />
-                    <div class="info">
-                        <h2>Details</h2>
-                        <div class="prompt">
-                            <div class="title">Prompt</div>
-                            <p class="desc">noi dung 2</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- item -->
-            <div id="popup3" class="popup">
-                <div class="popup-content">
-                    <span class="popup-close">&times;</span>
-                    <img src="./assets/img/hair-3.png" alt="Ảnh 1" />
-                    <div class="info">
-                        <h2>Details</h2>
-                        <div class="prompt">
-                            <div class="title">Prompt</div>
-                            <p class="desc">noi dung 3</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <!-- item -->
             <div id="popup4" class="popup">
                 <div class="popup-content">
                     <span class="popup-close">&times;</span>
-                    <img src="./assets/img/img1.jpg" alt="Ảnh 1" />
+                    <img
+                        src="./assets/img/773296994933537776.png"
+                        alt="773296994933537776"
+                    />
                     <div class="info">
                         <h2>Details</h2>
+                        <div class="info-tools-container">
+                            <div class="info-tools">
+                                <p class="left">seart 2</p>
+                                <p class="right">AI tools</p>
+                            </div>
+                            <div class="info-tools">
+                                <p class="left">check 2</p>
+                                <p class="right">Checkpoint</p>
+                            </div>
+                            <div class="info-tools">
+                                <p class="left">lora 1jhgj</p>
+                                <p class="right">Lora</p>
+                            </div>
+                        </div>
                         <div class="prompt">
-                            <div class="title">Prompt</div>
-                            <p class="desc">noi dung 4</p>
+                            <div class="prompt-header">
+                                <div class="title">Prompt</div>
+                                <div class="copy" onclick="copyText()">
+                                    <i class="fa-regular fa-copy"></i>Copy
+                                </div>
+                            </div>
+                            <p class="desc" id="promptDesc">dasdasdkasdkasd</p>
+                        </div>
+                        <div class="prompt">
+                            <div class="prompt-header">
+                                <div class="title">Negative Prompt</div>
+                                <div class="copy" onclick="copyTextNagative()">
+                                    <i class="fa-regular fa-copy"></i>Copy
+                                </div>
+                            </div>
+                            <p class="desc" id="NagativeDesc">225asdasasc</p>
+                        </div>
+                        <div class="spec">
+                            <div class="left">
+                                <p class="title">Size</p>
+                                <p class="desc">786x1000</p>
+                                <p class="title">Steps</p>
+                                <p class="desc">70</p>
+                                <p class="title">Seed</p>
+                                <p class="desc">1269959959</p>
+                            </div>
+                            <div class="right">
+                                <p class="title">Sampler</p>
+                                <p class="desc">DPM++ 2M SDE Karras</p>
+                                <p class="title">Tỷ lệ CFG</p>
+                                <p class="desc">7</p>
+                                <p class="title">Clip skip</p>
+                                <p class="desc">4</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- item -->
             <div id="popup5" class="popup">
                 <div class="popup-content">
                     <span class="popup-close">&times;</span>
-                    <img src="./assets/img/img2.jpg" alt="Ảnh 1" />
+                    <img src="./assets/img/img2.jpg" alt="img2" />
                     <div class="info">
                         <h2>Details</h2>
+                        <div class="info-tools-container">
+                            <div class="info-tools">
+                                <p class="left">tensor.art</p>
+                                <p class="right">AI tools</p>
+                            </div>
+                            <div class="info-tools">
+                                <p class="left">check 2</p>
+                                <p class="right">Checkpoint</p>
+                            </div>
+                            <div class="info-tools">
+                                <p class="left">lora 10</p>
+                                <p class="right">Lora</p>
+                            </div>
+                        </div>
                         <div class="prompt">
-                            <div class="title">Prompt</div>
-                            <p class="desc">noi dung 5</p>
+                            <div class="prompt-header">
+                                <div class="title">Prompt</div>
+                                <div class="copy" onclick="copyText()">
+                                    <i class="fa-regular fa-copy"></i>Copy
+                                </div>
+                            </div>
+                            <p class="desc" id="promptDesc">no dung prompt</p>
+                        </div>
+                        <div class="prompt">
+                            <div class="prompt-header">
+                                <div class="title">Negative Prompt</div>
+                                <div class="copy" onclick="copyTextNagative()">
+                                    <i class="fa-regular fa-copy"></i>Copy
+                                </div>
+                            </div>
+                            <p class="desc" id="NagativeDesc">negative</p>
+                        </div>
+                        <div class="spec">
+                            <div class="left">
+                                <p class="title">Size</p>
+                                <p class="desc">556 x 999</p>
+                                <p class="title">Steps</p>
+                                <p class="desc">60</p>
+                                <p class="title">Seed</p>
+                                <p class="desc"></p>
+                            </div>
+                            <div class="right">
+                                <p class="title">Sampler</p>
+                                <p class="desc">DPM++ 2M SDE Karras</p>
+                                <p class="title">Tỷ lệ CFG</p>
+                                <p class="desc"></p>
+                                <p class="title">Clip skip</p>
+                                <p class="desc"></p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- item -->
             <div id="popup6" class="popup">
                 <div class="popup-content">
                     <span class="popup-close">&times;</span>
-                    <img src="./assets/img/img3.jpg" alt="Ảnh 2" />
+                    <img src="./assets/img/img3.jpg" alt="img3" />
                     <div class="info">
                         <h2>Details</h2>
+                        <div class="info-tools-container">
+                            <div class="info-tools">
+                                <p class="left">midjourney</p>
+                                <p class="right">AI tools</p>
+                            </div>
+                            <div class="info-tools">
+                                <p class="left">check 4</p>
+                                <p class="right">Checkpoint</p>
+                            </div>
+                            <div class="info-tools">
+                                <p class="left">lora 4</p>
+                                <p class="right">Lora</p>
+                            </div>
+                        </div>
                         <div class="prompt">
-                            <div class="title">Prompt</div>
-                            <p class="desc">noi dung 6</p>
+                            <div class="prompt-header">
+                                <div class="title">Prompt</div>
+                                <div class="copy" onclick="copyText()">
+                                    <i class="fa-regular fa-copy"></i>Copy
+                                </div>
+                            </div>
+                            <p class="desc" id="promptDesc">prompt 4</p>
+                        </div>
+                        <div class="prompt">
+                            <div class="prompt-header">
+                                <div class="title">Negative Prompt</div>
+                                <div class="copy" onclick="copyTextNagative()">
+                                    <i class="fa-regular fa-copy"></i>Copy
+                                </div>
+                            </div>
+                            <p class="desc" id="NagativeDesc">negative 4</p>
+                        </div>
+                        <div class="spec">
+                            <div class="left">
+                                <p class="title">Size</p>
+                                <p class="desc">786x1000</p>
+                                <p class="title">Steps</p>
+                                <p class="desc">40</p>
+                                <p class="title">Seed</p>
+                                <p class="desc">1269959959</p>
+                            </div>
+                            <div class="right">
+                                <p class="title">Sampler</p>
+                                <p class="desc">Euler a</p>
+                                <p class="title">Tỷ lệ CFG</p>
+                                <p class="desc">6</p>
+                                <p class="title">Clip skip</p>
+                                <p class="desc">1</p>
+                            </div>
                         </div>
                     </div>
                 </div>

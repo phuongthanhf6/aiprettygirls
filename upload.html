@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dashboard</title>
+        <link rel="stylesheet" href="./assets/css/upload-image.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Thêm Hình Ảnh Mới</h1>
+            <form id="imageForm">
+                <label for="id">ID:</label>
+                <input type="number" id="imageId" required />
+
+                <label for="category">Chọn Danh Mục:</label>
+                <select id="category" required>
+                    <option value="anime">Anime</option>
+                    <option value="realistic">Realistic</option>
+                    <option value="game">Game</option>
+                    <option value="buildings">Buildings</option>
+                    <option value="photography">Photography</option>
+                </select>
+
+                <label for="image">Tải Ảnh Lên:</label>
+                <input type="file" id="image" accept="image/*" required />
+
+                <button type="submit">Lưu</button>
+            </form>
+        </div>
+
+        <div class="container">
+            <h1>Thông tin chi tiết cho hình ảnh</h1>
+            <form id="popupForm">
+                <label for="popupId">ID:</label>
+                <input type="text" id="popupId" required />
+
+                <label for="popupImage">Tải Ảnh Lên:</label>
+                <input type="file" id="popupImage" accept="image/*" required />
+
+                <label for="aiTools">AI Tools:</label>
+                <input type="text" id="aiTools" required />
+
+                <label for="checkpoint">Checkpoint:</label>
+                <input type="text" id="checkpoint" required />
+
+                <label for="lora">Lora:</label>
+                <input type="text" id="lora" required />
+
+                <label for="prompt">Prompt:</label>
+                <textarea id="prompt" rows="5" required></textarea>
+
+                <label for="negative">Negative:</label>
+                <textarea id="negative" rows="5" required></textarea>
+
+                <label for="size">Size:</label>
+                <input type="text" id="size" />
+
+                <label for="steps">Steps:</label>
+                <input type="number" id="steps" />
+
+                <label for="seed">Seed:</label>
+                <input type="text" id="seed" />
+
+                <label for="sampler">Sampler:</label>
+                <select id="sampler">
+                    <option value="DPM++ 2M SDE Karras">
+                        DPM++ 2M SDE Karras
+                    </option>
+                    <option value="Euler a">Euler a</option>
+                    <option value="Heun">Heun</option>
+                </select>
+
+                <label for="cfg">Tỷ lệ CFG:</label>
+                <input type="number" id="cfg" />
+
+                <label for="clipSkip">Clip skip:</label>
+                <input type="number" id="clipSkip" />
+
+                <button type="submit">Save</button>
+            </form>
+        </div>
+
+        <div id="popupContainer" class="popup hidden">
+            <div class="popup-content">
+                <span class="popup-close">&times;</span>
+                <button id="copyButton">COPY</button>
+                <pre id="generatedCode"></pre>
+            </div>
+        </div>
+
+        <script src="./assets/javascript/upload.js"></script>
+    </body>
+</html>

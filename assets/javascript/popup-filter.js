@@ -113,3 +113,5 @@ document.querySelectorAll(".filter-btn").forEach((button) => {
         renderPagination();
     });
 });
+
+// ==============================================================================
