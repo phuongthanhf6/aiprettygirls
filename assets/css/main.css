@@ -234,7 +234,7 @@ quo::after {
 }
 
 /* Header dùng chung cho tất cả trang page */
-.header {
+/* .header {
     top: 0px;
     position: sticky;
     height: 64px;
@@ -265,13 +265,13 @@ quo::after {
 .header .logo {
     min-width: 222px;
     display: flex;
-    align-items: center; 
-    text-decoration: none; 
+    align-items: center;
+    text-decoration: none;
 }
 
 .header .logo span {
-    color: white; 
-    font-size: 2.2rem; 
+    color: white;
+    font-size: 2.2rem;
     font-family: var(--font-2);
 }
 
@@ -279,7 +279,7 @@ quo::after {
     display: flex;
     margin-left: 100px;
     position: relative;
-    width: 100%;
+    align-items: center;
 }
 
 .header .menu a {
@@ -302,6 +302,7 @@ quo::after {
 
 .header .menu li {
     padding: 6px 0px;
+    position: relative;
 }
 
 .header .menu > li:hover {
@@ -329,4 +330,199 @@ quo::after {
     font-weight: 600;
     color: #fff;
     text-decoration: none;
+} */
+
+/* =========== */
+/* Header dùng chung cho tất cả trang page */
+.header {
+    top: 0;
+    position: sticky;
+    height: 64px;
+    background: var(--color-7);
+    opacity: 0.9;
+    padding: 10px 0;
+    z-index: 50;
+}
+
+.header .content-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align items for mobile */
+}
+
+.content-main {
+    width: 100%;
+    max-width: calc(100% - 64px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header .logo img {
+    height: 30px;
+    object-fit: cover;
+    margin-left: 4px;
+}
+
+.header .logo {
+    min-width: 222px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header .logo span {
+    color: white;
+    font-size: 2.2rem;
+    font-family: var(--font-2);
+}
+
+.header .menu {
+    display: flex;
+    margin-left: 100px;
+    position: relative;
+    align-items: center;
+}
+
+.header .menu-toggle {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.header .menu-toggle span {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 3px;
+}
+
+.header .menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 4px 20px;
+}
+
+.header .drop-menu {
+    background: #000000f3;
+    z-index: 60;
+}
+
+.header .drop-menu {
+    position: absolute;
+    top: 100%;
+    display: none;
+}
+
+.header .menu li {
+    padding: 6px 0;
+    position: relative;
+}
+
+.header .menu > li:hover {
+    background: var(--color-1);
+    border-radius: 4px;
+}
+
+.header .menu li:hover .drop-menu {
+    display: block;
+}
+
+.header .drop-menu li {
+    padding: 6px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.header .drop-menu li:hover {
+    background: var(--color-4);
+    border-radius: 0;
+}
+
+.header .logo {
+    list-style: none;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header .menu-toggle {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 100; /* Ensure it appears above other elements */
+}
+
+.header .menu-toggle span {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 3px;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.header .menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg); /* Rotate first line */
+    margin-top: 0; /* Adjust margin */
+}
+
+.header .menu-toggle.active span:nth-child(2) {
+    opacity: 0; /* Hide the middle line */
+}
+
+.header .menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg); /* Rotate last line */
+    margin-bottom: 0; /* Adjust margin */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header .menu {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 64px; /* Below the header */
+        left: 0;
+        right: 0;
+        background: var(--color-7); /* Match header background */
+    }
+
+    .header .menu-toggle {
+        display: flex; /* Show hamburger icon */
+    }
+
+    .header .menu.show {
+        display: flex; /* Show menu when toggled */
+        margin-right: 10px;
+    }
+
+    .header .menu a {
+        padding: 10px 20px; /* Increase padding for mobile */
+    }
+
+    .header .drop-menu {
+        position: static; /* Drop menu follows parent */
+
+        width: 94%;
+        margin: auto;
+    }
+    .header .menu li {
+        border: 1px dotted #cccccc50;
+        width: 100%;
+    }
+
+    .header .menu a {
+        width: 100%;
+    }
+    .header .drop-menu li {
+        padding: 6px 10px;
+    }
+    .header .menu li:hover {
+        background: var(--color-1);
+    }
+
+    .header .drop-menu li:hover {
+        background: var(--color-4);
+    }
 }

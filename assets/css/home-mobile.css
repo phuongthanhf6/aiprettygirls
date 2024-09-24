@@ -43,7 +43,15 @@
     .popup .info .spec .right {
         width: 100%;
     }
-    .popup .info .spec{
+    .popup .info .spec {
         display: block;
+    }
+    .filter-buttons button {
+        margin-right: 5px;
+        margin-bottom: 10px;
+    }
+
+    .filter-buttons button:last-child {
+        margin-right: 0;
     }
 }

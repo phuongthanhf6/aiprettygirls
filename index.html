@@ -98,7 +98,7 @@
         <link rel="stylesheet" href="./assets/css/reset.css" />
         <link rel="stylesheet" href="./assets/css/main.css" />
         <link rel="stylesheet" href="./assets/css/home.css" />
-        <link rel="stylesheet" href="./assets/css/home-mobile.css">
+        <link rel="stylesheet" href="./assets/css/home-mobile.css" />
     </head>
     <body>
         <!-- Menu -->
@@ -108,9 +108,14 @@
                     <span>AI Pretty Girls</span>
                     <img src="./assets/img/logo-thumb.png" alt="LOGO" />
                 </a>
+                <div class="menu-toggle" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <ul class="menu">
                     <li>
-                        <a href="index.html">Prompt</a>
+                        <a href="#!">Prompt</a>
                         <ul class="drop-menu">
                             <li><a href="#medium">Medium</a></li>
                             <li><a href="#style">Style</a></li>
@@ -352,5 +357,7 @@
         <script src="./assets/javascript/popup-filter.js"></script>
         <!-- Copy nội dung Prompt hay Nagative trong info của popup -->
         <script src="./assets/javascript/copy.js"></script>
+        <!-- giao diện menu trên mobile -->
+        <script src="./assets/javascript/open-close-menu.js"></script>
     </body>
 </html>
