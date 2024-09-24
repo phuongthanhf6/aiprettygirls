@@ -66,20 +66,20 @@ document.getElementById("popupForm").addEventListener("submit", function (e) {
                 <div class="prompt">
                     <div class="prompt-header">
                         <div class="title">Prompt</div>
-                        <div class="copy" onclick="copyText()">
+                        <div class="copy" onclick="copyText(this)">
                             <i class="fa-regular fa-copy"></i>Copy
                         </div>
                     </div>
-                    <p class="desc" id="promptDesc">${prompt}</p>
+                    <p class="desc copy-prompt">${prompt}</p>
                 </div>
                 <div class="prompt">
                     <div class="prompt-header">
                         <div class="title">Negative Prompt</div>
-                        <div class="copy" onclick="copyTextNagative()">
+                        <div class="copy" onclick="copyText(this)">
                             <i class="fa-regular fa-copy"></i>Copy
                         </div>
                     </div>
-                    <p class="desc" id="NagativeDesc">${negative}</p>
+                    <p class="desc copy-prompt">${negative}</p>
                 </div>
                 <div class="spec">
                     <div class="left">

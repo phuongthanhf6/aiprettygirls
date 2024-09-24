@@ -1,7 +1,7 @@
 const images = [
     { id: 1, category: "anime", src: "./assets/img/hair-1.jpg" },
     { id: 2, category: "realistic", src: "./assets/img/hair-2.jpg" },
-    { id: 3, category: "game", src: "./assets/img/hair-3.png" },
+    { id: 3, category: "realistic", src: "./assets/img/hair-3.png" },
     { id: 4, category: "buildings", src: "./assets/img/img1.jpg" },
     { id: 5, category: "photography", src: "./assets/img/img2.jpg" },
     { id: 6, category: "photography", src: "./assets/img/img3.jpg" },

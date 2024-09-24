@@ -148,8 +148,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
-
 h2 {
     text-align: center;
     color: var(--color-4);
@@ -198,7 +196,6 @@ button:hover {
     justify-content: center;
     align-items: center;
 }
-
 
 /* Hidden class to hide popup */
 .hidden {

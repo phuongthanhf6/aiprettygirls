@@ -1,42 +1,25 @@
-function copyText() {
-    const promptDesc = document.getElementById("promptDesc").innerText;
-    
+function copyText(copyButton) {
+    // Tìm thẻ p có class 'copy-prompt' gần nhất với nút đã bấm
+    const copyprompt = copyButton
+        .closest(".prompt")
+        .querySelector(".copy-prompt").innerText;
+
     // Tạo một textarea tạm thời để sao chép văn bản
     const tempInput = document.createElement("textarea");
-    tempInput.value = promptDesc;
+    tempInput.value = copyprompt;
     document.body.appendChild(tempInput);
     tempInput.select();
     document.execCommand("copy");
     document.body.removeChild(tempInput);
-    
-    // Hiển thị thông báo
+
+    // Hiển thị thông báo (tùy chỉnh thông báo của bạn)
     const copyNotification = document.getElementById("copyNotification");
-    copyNotification.classList.add("show");
+    if (copyNotification) {
+        copyNotification.classList.add("show");
 
-    // Ẩn thông báo sau 2 giây
-    setTimeout(() => {
-        copyNotification.classList.remove("show");
-    }, 2000);
-}
-
-
-function copyTextNagative() {
-    const promptDesc = document.getElementById("NagativeDesc").innerText;
-    
-    // Tạo một textarea tạm thời để sao chép văn bản
-    const tempInput = document.createElement("textarea");
-    tempInput.value = promptDesc;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
-    
-    // Hiển thị thông báo
-    const copyNotification = document.getElementById("copyNotification");
-    copyNotification.classList.add("show");
-
-    // Ẩn thông báo sau 2 giây
-    setTimeout(() => {
-        copyNotification.classList.remove("show");
-    }, 2000);
+        // Ẩn thông báo sau 2 giây
+        setTimeout(() => {
+            copyNotification.classList.remove("show");
+        }, 2000);
+    }
 }

@@ -175,12 +175,12 @@
                         <div class="prompt">
                             <div class="prompt-header">
                                 <div class="title">Prompt</div>
-                                <div class="copy" onclick="copyText()">
+                                <div class="copy" onclick="copyText(this)">
                                     <i class="fa-regular fa-copy"></i>Copy
                                 </div>
                             </div>
                             <!-- Custom Prompt Here -->
-                            <p class="desc" id="promptDesc">
+                            <p class="desc copy-prompt">
                                 masterpiece, best quality, official art,
                                 extremely detailed 8k CG unity wallpaper,
                                 absurd, 8k resolution
@@ -190,57 +190,22 @@
                         <div class="prompt">
                             <div class="prompt-header">
                                 <div class="title">Nagative Prompt</div>
-                                <div class="copy" onclick="copyTextNagative()">
+                                <div class="copy" onclick="copyText(this)">
                                     <i class="fa-regular fa-copy"></i>Copy
                                 </div>
                             </div>
                             <!-- Custom Negative Here -->
-                            <p class="desc" id="NagativeDesc">
+                            <p class="desc copy-prompt">
                                 ng_deepnegative_v1_75t, low quality:2, normal
                                 quality:2, lowres, worst quality:2,
                                 ((monochrome)), ((grayscale)), blury, bad
-                                anatomy, bad hands, badfingers, missingfingers,
-                                extradigit, fewerdigits, wrong hand, badfoots,
-                                badfeet, three legs, deformed leg, wrong feet,
-                                text, cropped, signature, watermark, usemame,
-                                logo, small_penis, abnormal, malformation, nsfw
-                                Lorem, ipsum dolor sit amet consectetur
-                                adipisicing elit. Iure ex, dolor modi optio
-                                expedita, cum perspiciatis eum sint quae sed
-                                aperiam labore maiores repudiandae illum
-                                accusantium id velit nulla, esse quidem et?
-                                Officiis itaque perferendis tempora veritatis,
-                                saepe iusto nisi illo temporibus harum molestiae
-                                dolor similique autem! Voluptates, quaerat
-                                dignissimos.
+                                anatomy...
                             </p>
-                        </div>
-                        <!-- Thông số -->
-                        <div class="spec">
-                            <div class="left">
-                                <p class="title">Size</p>
-                                <p class="desc">768 x 1024</p>
-
-                                <p class="title">Steps</p>
-                                <p class="desc">60</p>
-
-                                <p class="title">Seed</p>
-                                <p class="desc">213213a</p>
-                            </div>
-                            <div class="right">
-                                <p class="title">Sampler</p>
-                                <p class="desc">DPM++ 2M SDE Karras</p>
-
-                                <p class="title">Tỷ lệ CFG</p>
-                                <p class="desc">7</p>
-
-                                <p class="title">Clip skip</p>
-                                <p class="desc">2</p>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <!-- item -->
             <div id="popup2" class="popup">
                 <div class="popup-content">
@@ -267,12 +232,12 @@
                         <div class="prompt">
                             <div class="prompt-header">
                                 <div class="title">Prompt</div>
-                                <div class="copy" onclick="copyText()">
+                                <div class="copy" onclick="copyText(this)">
                                     <i class="fa-regular fa-copy"></i>Copy
                                 </div>
                             </div>
                             <!-- Custom Prompt Here -->
-                            <p class="desc" id="promptDesc">
+                            <p class="desc copy-prompt">
                                 Đây là nội dung prompt popup 2
                             </p>
                         </div>
@@ -280,14 +245,12 @@
                         <div class="prompt">
                             <div class="prompt-header">
                                 <div class="title">Nagative Prompt</div>
-                                <div class="copy" onclick="copyTextNagative()">
+                                <div class="copy" onclick="copyText(this)">
                                     <i class="fa-regular fa-copy"></i>Copy
                                 </div>
                             </div>
                             <!-- Custom Negative Here -->
-                            <p class="desc" id="NagativeDesc">
-                                ng_deepnegative_v1_75t, low quality:2, normal
-                                quality:2, lowres, worst quality:2,
+                            <p class="desc copy-prompt">
                                 ((monochrome)), ((grayscale)), blury, bad
                                 anatomy, bad hands, badfingers, missingfingers,
                             </p>
@@ -320,74 +283,10 @@
             </div>
 
             <!-- item -->
-            <div id="popup4" class="popup">
+            <div id="popup3" class="popup">
                 <div class="popup-content">
                     <span class="popup-close">&times;</span>
-                    <img
-                        src="./assets/img/773296994933537776.png"
-                        alt="773296994933537776"
-                    />
-                    <div class="info">
-                        <h2>Details</h2>
-                        <div class="info-tools-container">
-                            <div class="info-tools">
-                                <p class="left">seart 2</p>
-                                <p class="right">AI tools</p>
-                            </div>
-                            <div class="info-tools">
-                                <p class="left">check 2</p>
-                                <p class="right">Checkpoint</p>
-                            </div>
-                            <div class="info-tools">
-                                <p class="left">lora 1jhgj</p>
-                                <p class="right">Lora</p>
-                            </div>
-                        </div>
-                        <div class="prompt">
-                            <div class="prompt-header">
-                                <div class="title">Prompt</div>
-                                <div class="copy" onclick="copyText()">
-                                    <i class="fa-regular fa-copy"></i>Copy
-                                </div>
-                            </div>
-                            <p class="desc" id="promptDesc">dasdasdkasdkasd</p>
-                        </div>
-                        <div class="prompt">
-                            <div class="prompt-header">
-                                <div class="title">Negative Prompt</div>
-                                <div class="copy" onclick="copyTextNagative()">
-                                    <i class="fa-regular fa-copy"></i>Copy
-                                </div>
-                            </div>
-                            <p class="desc" id="NagativeDesc">225asdasasc</p>
-                        </div>
-                        <div class="spec">
-                            <div class="left">
-                                <p class="title">Size</p>
-                                <p class="desc">786x1000</p>
-                                <p class="title">Steps</p>
-                                <p class="desc">70</p>
-                                <p class="title">Seed</p>
-                                <p class="desc">1269959959</p>
-                            </div>
-                            <div class="right">
-                                <p class="title">Sampler</p>
-                                <p class="desc">DPM++ 2M SDE Karras</p>
-                                <p class="title">Tỷ lệ CFG</p>
-                                <p class="desc">7</p>
-                                <p class="title">Clip skip</p>
-                                <p class="desc">4</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- item -->
-            <div id="popup5" class="popup">
-                <div class="popup-content">
-                    <span class="popup-close">&times;</span>
-                    <img src="./assets/img/img2.jpg" alt="img2" />
+                    <img src="./assets/img/hair-3.png" alt="hair-3" />
                     <div class="info">
                         <h2>Details</h2>
                         <div class="info-tools-container">
@@ -396,7 +295,7 @@
                                 <p class="right">AI tools</p>
                             </div>
                             <div class="info-tools">
-                                <p class="left">check 2</p>
+                                <p class="left">check 4</p>
                                 <p class="right">Checkpoint</p>
                             </div>
                             <div class="info-tools">
@@ -407,88 +306,27 @@
                         <div class="prompt">
                             <div class="prompt-header">
                                 <div class="title">Prompt</div>
-                                <div class="copy" onclick="copyText()">
+                                <div class="copy" onclick="copyText(this)">
                                     <i class="fa-regular fa-copy"></i>Copy
                                 </div>
                             </div>
-                            <p class="desc" id="promptDesc">no dung prompt</p>
+                            <p class="desc copy-prompt">prompt 3</p>
                         </div>
                         <div class="prompt">
                             <div class="prompt-header">
                                 <div class="title">Negative Prompt</div>
-                                <div class="copy" onclick="copyTextNagative()">
+                                <div class="copy" onclick="copyText(this)">
                                     <i class="fa-regular fa-copy"></i>Copy
                                 </div>
                             </div>
-                            <p class="desc" id="NagativeDesc">negative</p>
-                        </div>
-                        <div class="spec">
-                            <div class="left">
-                                <p class="title">Size</p>
-                                <p class="desc">556 x 999</p>
-                                <p class="title">Steps</p>
-                                <p class="desc">60</p>
-                                <p class="title">Seed</p>
-                                <p class="desc"></p>
-                            </div>
-                            <div class="right">
-                                <p class="title">Sampler</p>
-                                <p class="desc">DPM++ 2M SDE Karras</p>
-                                <p class="title">Tỷ lệ CFG</p>
-                                <p class="desc"></p>
-                                <p class="title">Clip skip</p>
-                                <p class="desc"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- item -->
-            <div id="popup6" class="popup">
-                <div class="popup-content">
-                    <span class="popup-close">&times;</span>
-                    <img src="./assets/img/img3.jpg" alt="img3" />
-                    <div class="info">
-                        <h2>Details</h2>
-                        <div class="info-tools-container">
-                            <div class="info-tools">
-                                <p class="left">midjourney</p>
-                                <p class="right">AI tools</p>
-                            </div>
-                            <div class="info-tools">
-                                <p class="left">check 4</p>
-                                <p class="right">Checkpoint</p>
-                            </div>
-                            <div class="info-tools">
-                                <p class="left">lora 4</p>
-                                <p class="right">Lora</p>
-                            </div>
-                        </div>
-                        <div class="prompt">
-                            <div class="prompt-header">
-                                <div class="title">Prompt</div>
-                                <div class="copy" onclick="copyText()">
-                                    <i class="fa-regular fa-copy"></i>Copy
-                                </div>
-                            </div>
-                            <p class="desc" id="promptDesc">prompt 4</p>
-                        </div>
-                        <div class="prompt">
-                            <div class="prompt-header">
-                                <div class="title">Negative Prompt</div>
-                                <div class="copy" onclick="copyTextNagative()">
-                                    <i class="fa-regular fa-copy"></i>Copy
-                                </div>
-                            </div>
-                            <p class="desc" id="NagativeDesc">negative 4</p>
+                            <p class="desc copy-prompt">negative 3</p>
                         </div>
                         <div class="spec">
                             <div class="left">
                                 <p class="title">Size</p>
                                 <p class="desc">786x1000</p>
                                 <p class="title">Steps</p>
-                                <p class="desc">40</p>
+                                <p class="desc">30</p>
                                 <p class="title">Seed</p>
                                 <p class="desc">1269959959</p>
                             </div>
@@ -496,9 +334,9 @@
                                 <p class="title">Sampler</p>
                                 <p class="desc">Euler a</p>
                                 <p class="title">Tỷ lệ CFG</p>
-                                <p class="desc">6</p>
+                                <p class="desc"></p>
                                 <p class="title">Clip skip</p>
-                                <p class="desc">1</p>
+                                <p class="desc"></p>
                             </div>
                         </div>
                     </div>
