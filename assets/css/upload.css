@@ -139,20 +139,28 @@ body {
 
 .container {
     max-width: 600px;
-    margin: auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
     background: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+
+
+h2 {
     text-align: center;
+    color: var(--color-4);
 }
 
 label {
     display: block;
     margin: 10px 0 5px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--color-2);
 }
 
 input,
@@ -164,17 +172,18 @@ button {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 1.4rem;
 }
 
 button {
-    background-color: #28a745;
+    background-color: var(--color-3);
     color: white;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: var(--color-4);
 }
 
 /* Popup Styles */
